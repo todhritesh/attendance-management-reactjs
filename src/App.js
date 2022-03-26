@@ -17,6 +17,7 @@ function App() {
   const navigate = useNavigate()
   useEffect(()=>{
     const change = onAuthStateChanged(auth , currentUser => {
+
       if(currentUser){
         if(user){
           const role = user.role;

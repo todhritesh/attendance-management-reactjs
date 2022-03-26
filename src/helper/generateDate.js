@@ -4,8 +4,8 @@ function generateDate() {
     const month = String(date.getMonth()+1).padStart(2,'0');
     const year = date.getFullYear();
     const curr_date = `${year}-${month}-${day}`
-    // return curr_date
-    return '2022-03-27'
+    return curr_date
+    // return '2022-03-27'
 }
 
 export {
