@@ -67,10 +67,10 @@ function App() {
       }
       <Routes>
         <Route exact path="/" element={<Home/>}/>
-        <Route exact path="/" element={<Home/>}/>
         <Route exact path="/login" element={ <Login/>}/>
         <Route element={<ProtectedRoutes/>}>
           <Route  path="/admin" element={<AdminDashboard/>} />
+          <Route exact path="/" element={<Home/>}/>
           <Route  path="/admin/manage-teachers" element={<ManageTeachers/>} />
           <Route  path="/teacher" element={<TeacherDashboard/>} />
           <Route  path="/teacher/manage-students" element={<ManageStudents/>} />

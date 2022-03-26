@@ -36,7 +36,7 @@ function Navbar() {
     <AppBar className={classes.root}>
         <Toolbar>
             <IconButton>
-                <Typography className={classes.textColor} >Attendance</Typography>
+                <Typography onClick={()=>navigate("/")} className={classes.textColor} >Attendance</Typography>
             </IconButton>
             <Box sx={{flexGrow:1}} />
             {!user && <Button onClick={()=>setOpneApplyDialog(true)} variant="contianed">Apply</Button> }
