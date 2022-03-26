@@ -51,8 +51,11 @@ function App() {
           })
         }
       }else{
-        navigate('/login')
-        console.log("change")
+        if(location.pathname==='/'){
+          navigate("/")
+        }else{
+          navigate('/login')
+        }
       }
     })
     return () => {
@@ -71,7 +74,6 @@ function App() {
         <Route exact path="/login" element={ <Login/>}/>
         <Route element={<ProtectedRoutes/>}>
           <Route  path="/admin" element={<AdminDashboard/>} />
-          <Route exact path="/" element={<Home/>}/>
           <Route  path="/admin/manage-teachers" element={<ManageTeachers/>} />
           <Route  path="/teacher" element={<TeacherDashboard/>} />
           <Route  path="/teacher/manage-students" element={<ManageStudents/>} />
